@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Médiatèque</title>
+    <link href="app.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+    <script src="confetti.min.js"></script>
+</head>
+
+<body>
+    <div id="containerA">
+        <h1>Liste de films</h1>
+        <button id="addBtn" onclick="displayAddForm(event)">Ajouter</button>
+        <div id="secretMessage1">
+            <p>Film ajouté avec succès</p>
+        </div>
+        <div id="secretForm">
+            <form id="regristrationForm" action="#">
+                <label for="name">Name : </label>
+                <input type="text" id="name" name="name" value="">
+                <label for="year">Year : </label>
+                <input type="number" id="year" name="year" value="">
+                <label for="author">Author : </label>
+                <input type="text" id="author" name="author" value="">
+                <button type="button" id="submit">Add</button>
+            </form>
+        </div>
+        <div id="gridDiv">
+            <div id="div1"></div>
+            <div id="container1">
+                <label for="sorting">Filtrer par :</label><br><br>
+                <select name="sortType" id="sort">
+                    <option value="none" selected disabled hidden>--select--</option>
+                    <option id="Annee">Année</option>
+                    <option id="Nom">Nom</option>
+                </select>
+                <br>
+                <table id="myTable">
+                    <thead>
+                        <tr>
+                            <th>Titre</th>
+                            <th>Année</th>
+                            <th>Réalisateur</th>
+                        </tr>
+                    </thead>
+                    <tbody id="testBody">
+                    </tbody>
+                </table>
+            </div>
+            <div id="div2"></div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
